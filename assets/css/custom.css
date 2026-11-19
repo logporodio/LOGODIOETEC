@@ -1,0 +1,91 @@
+/* Estilos Customizados do CineKids */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@500;600;700&display=swap');
+
+:root {
+    --cor-amarelo-pastel: #FEF9C3;
+    --cor-amarelo-forte: #FDE047;
+    --cor-azul-pastel: #BAE6FD;
+    --cor-azul-forte: #0284C7;
+    --cor-rosa-pastel: #FBCFE8;
+    --cor-rosa-forte: #EC4899;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #FFFDE7;
+    color: #0c4a6e;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, .font-fun {
+    font-family: 'Fredoka', cursive, sans-serif;
+}
+
+/* Custom Scrollbar com tons pastéis */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #FEF9C3;
+}
+::-webkit-scrollbar-thumb {
+    background: #F472B6;
+    border-radius: 9999px;
+    border: 2px solid #FEF9C3;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #0284C7;
+}
+
+/* Esconder barra de rolagem mas manter navegação nos carrosséis */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Cards de Filmes com efeito Netflix Kids */
+.movie-card {
+    transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.movie-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    z-index: 10;
+}
+
+/* Selos Oficiais de Classificação Indicativa Brasileira */
+.badge-classificacao-L {
+    background-color: #10B981;
+    color: white;
+}
+.badge-classificacao-10 {
+    background-color: #0284C7;
+    color: white;
+}
+.badge-classificacao-12 {
+    background-color: #F59E0B;
+    color: white;
+}
+
+/* Efeito Glow Pastel */
+.shadow-pastel-pink {
+    box-shadow: 0 10px 25px -5px rgba(236, 72, 153, 0.3), 0 8px 10px -6px rgba(236, 72, 153, 0.2);
+}
+.shadow-pastel-blue {
+    box-shadow: 0 10px 25px -5px rgba(2, 132, 199, 0.3), 0 8px 10px -6px rgba(2, 132, 199, 0.2);
+}
+.shadow-pastel-yellow {
+    box-shadow: 0 10px 25px -5px rgba(234, 179, 8, 0.3), 0 8px 10px -6px rgba(234, 179, 8, 0.2);
+}
+
+/* Animações suaves */
+@keyframes bounceSmall {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-4px); }
+}
+.animate-bounce-slow {
+    animation: bounceSmall 2.5s infinite ease-in-out;
+}
